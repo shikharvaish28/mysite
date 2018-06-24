@@ -170,29 +170,18 @@
   <div class="container mt-4 mp-4 mb-4">
     <div class="card mb-3">
       {% if object.image %}
-      <img class="d-flex mr-3 image-responsive" src="{{object.image.url}}" alt="Generic placeholder image" height="600" width="1110"> {% endif %}
+      <img class="d-flex mr-3 img-responsive" src="{{object.image.url}}" alt="Generic placeholder image" height="600" width="1110"> {% endif %}
       <div class="card-body">
         <h2 class="card-title text-center"><u>{{object.title}}</u></h2>
         <p class="card-text container"><small class="font-weight-normal text-muted"><u>Author</u>: {{object.author_name}}</small></p>
         <p class="card-text container"><small class="font-weight-normal text-muted"><u>Author Email</u>: {{object.author_email}}</small></p>
         <!-- <h5 class="container"><u>Share On:</u></h5> -->
         <div class=" container">
-          <!-- <div class="row">
-            <div class="col-2">
-              {% post_to_facebook request.build_absolute_uri %}
-            </div>
-            <div class="col-2">
-              {% post_to_twitter "New Post from EDCBVUCOEP: " object.title request.build_absolute_uri %}
-            </div>
-            <div class="col-2">
-              {% post_to_linkedin object.title request.build_absolute_uri "Post to LinkedIn" %}
-            </div>
-          </div> -->
         </div>
         <p class="container mt-3 card-text">{{object.content}}</p>
         <p class="card-text container"><small class="text-muted">Date Published : <em>{{object.publish_date}}</em></small></p>
-        <div class=" container fb-like" data-href="http://&#123;&#123;host&#125;&#125;" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-        <div class="container fb-comments" data-href="http://127.0.0.1:8000/blog/&#123;&#123; object.id ))" data-width="100%" data-numposts="5"></div>
+        <div class=" container fb-like" data-href="http://edc-blog.herokuapp.com;" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+        <div class="container fb-comments" data-href="http://edc-blog.herokuapp.com/blog/&#123;&#123; object.id ))" data-width="100%" data-numposts="5"></div>
       </div>
     </div>
   </div>

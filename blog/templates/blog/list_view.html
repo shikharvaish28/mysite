@@ -189,7 +189,7 @@
         <ul class="list-unstyled">
           <li class="media">
             {% if recent.image %}
-            <img class="d-flex mr-3 image-responsive" src="{{recent.image.url}}" alt="Generic placeholder image" height="150" width="150"> {% endif %}
+            <img class="d-flex mr-3 img-responsive" src="{{recent.image.url}}" alt="Generic placeholder image" height="150" width="150"> {% endif %}
             <div class="media-body">
               <h5 class="mt-0 mb-1"><a href="/blog/{{recent.id}}">{{recent.title}}</a></h5>
               <h6 class="mt-3">{{ recent.content|safe|truncatewords:"15"|linebreaks }}</h6>
