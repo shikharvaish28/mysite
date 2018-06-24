@@ -15,7 +15,7 @@ import dj_database_url
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname((os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # STATICFILES_DIRS = (
@@ -35,7 +35,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SECRET_KEY = '9_4wju(=*7!21t-7g3831#6t#ropz^4&z#by2%_=1v#b+5k$xk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ '*' ]
 
