@@ -1,0 +1,156 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: Poppins;
+}
+
+p {
+  font-family: Rubik;
+}
+
+footer {
+  padding: 30px;
+
+  font-family: Poppins;
+}
+
+.ft {
+  display: flex;
+  align-items: center
+}
+
+.hello {
+  line-height: 25px;
+}
+
+.cont {
+  background-color: #b2c0cc;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.hov:hover {
+  background: url(img/collab.png);
+}
+
+.tech-slideshow {
+  position: relative;
+
+  overflow: hidden;
+
+  max-width: 1200px;
+  height: 200px;
+  margin: 0 auto;
+
+  transform: translate3d(0, 0, 0);
+}
+
+.tech-slideshow>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 2526px;
+  height: 200px;
+  height: 100%;
+
+  transform: translate3d(0, 0, 0);
+
+  background-image: url("img/collab1.png");
+}
+
+.tech-slideshow .mover-1 {
+  animation: moveSlideshow 35s linear infinite;
+}
+
+.tech-slideshow .mover-2 {
+  transition: opacity 0.5s ease-out;
+  animation: moveSlideshow 15s linear infinite;
+
+  opacity: 0;
+  background-position: 0 -200px;
+}
+
+.tech-slideshow:hover .mover-2 {
+  opacity: 1;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
+
+
+.cont {
+	background-color:#b2c0cc;
+}
+
+
+.wrapper {
+    text-align: center;
+}
+
+.hov:hover {
+    background: url(img/collab.png);
+}
+
+
+.tech-slideshow {
+  height: 200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.tech-slideshow > div {
+  height: 200px;
+  width: 2526px;
+  background-image: url("img/collab1.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.tech-slideshow .mover-1 {
+  animation: moveSlideshow 35s linear infinite;
+}
+
+.tech-slideshow .mover-2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  background-position: 0 -200px;
+  animation: moveSlideshow 15s linear infinite;
+}
+.tech-slideshow:hover .mover-2 {
+  opacity: 1;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
+
+
+    .parallax {
+    /* The image used */
+    background-image: url("https://pixabay.com/photo-2633132/");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .parallax-window {
+    min-height: 400px;
+    background: transparent;
+}

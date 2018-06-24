@@ -1,0 +1,346 @@
+{% load staticfiles%} {% load social_share %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Rubik" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>EDCBVUCOEP</title>
+  <link rel="icon" type="image/png" href="{% static 'img/flavcon.png' %}" style="height:128px;width:128px;" />
+  <style>
+    .cont {
+      background-color: #b2c0cc;
+    }
+
+    * {
+      font-family: Poppins;
+    }
+
+    .wrapper {
+      text-align: center;
+    }
+
+    .hov:hover {
+      background: url(img/collab.png);
+    }
+
+
+    .tech-slideshow {
+      height: 200px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .tech-slideshow>div {
+      height: 200px;
+      width: 2526px;
+      background-image: url("img/collab1.png");
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .tech-slideshow .mover-1 {
+      animation: moveSlideshow 35s linear infinite;
+    }
+
+    .tech-slideshow .mover-2 {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+      background-position: 0 -200px;
+      animation: moveSlideshow 15s linear infinite;
+    }
+
+    .tech-slideshow:hover .mover-2 {
+      opacity: 1;
+    }
+
+    @keyframes moveSlideshow {
+      100% {
+        transform: translateX(-66.6666%);
+      }
+    }
+
+
+    .parallax {
+      /* The image used */
+      background-image: url("https://pixabay.com/photo-2633132/");
+
+      /* Set a specific height */
+      height: 500px;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .parallax-window {
+      min-height: 400px;
+      background: transparent;
+    }
+
+    /*--------------------------------------------------------------
+    # Footer
+    --------------------------------------------------------------*/
+
+    #footer {
+      background: #343b40;
+      padding: 30px 0;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    #footer .copyright {
+      text-align: center;
+    }
+
+    #footer .credits {
+      padding-top: 10px;
+      text-align: center;
+      font-size: 13px;
+      color: #ccc;
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113487973-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113487973-1');
+  </script>
+
+
+</head>
+
+<body>
+  <!-- fb -->
+  <div id="fb-root"></div>
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=1593204107423465&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- fb -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="font-family:Poppins; background-color:rgba(52, 59, 64, 0.9);">
+
+    <a class="navbar-brand" href="/"> <img src="{% static 'img/edc-white.png' %}" alt="Mountain View" style="width:120px;height:40px;">   </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item active ">
+          <a class="nav-link home-nav" style="color:white;" href="http://www.edcbvucoep.com/">Home   <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link aboutus-anim" style="color:white;" href="http://www.edcbvucoep.com/#about">About Us   </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link init-anim" style="color:white;" href="http://www.edcbvucoep.com/">Blogs  </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link init-anim" style="color:white;" href="http://www.edcbvucoep.com/">Initiatives   </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link events-anim" style="color:white;" href="http://www.edcbvucoep.com/">Events   </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link con-anim" style="color:white;" href="http://www.edcbvucoep.com/">Contact Us   </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- end of header -->
+
+  <div class="container mt-4 mp-4 mb-4">
+    <div class="card mb-3">
+      {% if object.image %}
+      <img class="d-flex mr-3 image-responsive" src="{{object.image.url}}" alt="Generic placeholder image" height="600" width="1110"> {% endif %}
+      <div class="card-body">
+        <h2 class="card-title text-center"><u>{{object.title}}</u></h2>
+        <p class="card-text container"><small class="font-weight-normal text-muted"><u>Author</u>: {{object.author_name}}</small></p>
+        <p class="card-text container"><small class="font-weight-normal text-muted"><u>Author Email</u>: {{object.author_email}}</small></p>
+        <!-- <h5 class="container"><u>Share On:</u></h5> -->
+        <div class=" container">
+          <!-- <div class="row">
+            <div class="col-2">
+              {% post_to_facebook request.build_absolute_uri %}
+            </div>
+            <div class="col-2">
+              {% post_to_twitter "New Post from EDCBVUCOEP: " object.title request.build_absolute_uri %}
+            </div>
+            <div class="col-2">
+              {% post_to_linkedin object.title request.build_absolute_uri "Post to LinkedIn" %}
+            </div>
+          </div> -->
+        </div>
+        <p class="container mt-3 card-text">{{object.content}}</p>
+        <p class="card-text container"><small class="text-muted">Date Published : <em>{{object.publish_date}}</em></small></p>
+        <div class=" container fb-like" data-href="http://&#123;&#123;host&#125;&#125;" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+        <div class="container fb-comments" data-href="http://127.0.0.1:8000/blog/&#123;&#123; object.id ))" data-width="100%" data-numposts="5"></div>
+      </div>
+    </div>
+  </div>
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container" style="color:white;">
+      <div class="copyright">
+        <br><strong>Entreprenurship Development Cell</strong><br>
+        <br>Bharati Vidyapeeth College of Engineering , Pune.<br> All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- starting the script for the scrolling page -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    window.sr = ScrollReveal();
+    // ScrollReveal for the navigation bar
+    // animation for the whole navigation bar
+    sr.reveal('.navbar', {
+      duration: 1000,
+      origin: 'bottom',
+      mobile: true,
+      reset: true,
+      viewFactor: 0.2
+      // easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+    });
+    // animating the component of the navigation bar each at a time using some delay
+    // animation for the home button
+    sr.reveal('.home-nav', {
+      duration: 700,
+      delay: 00,
+      distance: '300px',
+      origin: 'right',
+      reset: true,
+      mobile: true,
+      reset: true,
+      viewFactor: 0.2
+    });
+    // animation for the about us button
+    sr.reveal('.aboutus-anim', {
+      duration: 1500,
+      delay: 50,
+      distance: '300px',
+      origin: 'right',
+      mobile: true,
+      reset: true,
+      viewFactor: 0.2
+    });
+    //for the initiatives tab
+    sr.reveal('.init-anim', {
+      duration: 1500,
+      delay: 100,
+      distance: '300px',
+      origin: 'right',
+      mobile: true,
+      reset: true,
+      viewFactor: 0.2
+    });
+    //Events tab
+    sr.reveal('.events-anim', {
+      duration: 1500,
+      delay: 150,
+      distance: '300px',
+      origin: 'right',
+      mobile: true,
+      reset: true,
+      viewFactor: 0.2
+    });
+    //Contacts tab
+    sr.reveal('.con-anim', {
+      duration: 1500,
+      delay: 200,
+      distance: '300px',
+      origin: 'right',
+      mobile: true,
+      reset: true,
+      viewFactor: 0.2
+    });
+    // animation for the SLIDER
+    sr.reveal('.slide-anim', {
+      duration: 3000,
+      origin: 'bottom',
+      reset: true
+    });
+    //animation for principal's Message and the founders meassage
+    sr.reveal('.pm-anim', {
+      duration: 1000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.2,
+      reset: true
+    });
+    sr.reveal('.pimg-anim', {
+      duration: 1000,
+      origin: 'left',
+      distance: '300px',
+      reset: true
+    });
+    // putting the same animation to the same heading
+    sr.reveal('.head-anim', {
+      duration: 1000,
+      origin: 'bottom',
+      reset: true,
+      mobile: true,
+      reset: true,
+      viewFactor: 0.2
+    });
+
+    sr.reveal('.showcase-btn', {
+      duration: 1500,
+      delay: 250,
+      origin: 'bottom',
+      reset: true,
+      mobile: true,
+      viewFactor: 0.2
+    });
+    sr.reveal('.quote', {
+      duration: 2000,
+      delay: 500,
+      origin: 'bottom',
+      reset: true
+    });
+  </script>
+</body>
+
+</html>
