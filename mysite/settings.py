@@ -21,10 +21,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # STATICFILES_DIRS = (
 #         os.path.join(BASE_DIR, 'static'),
 # )
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "mysite/static")
+STATIC_ROOT = os.path.join(BASE_DIR, "mysite/static")
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'mysite/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mysite/media')
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
