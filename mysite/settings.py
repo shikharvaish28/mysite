@@ -35,7 +35,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SECRET_KEY = '9_4wju(=*7!21t-7g3831#6t#ropz^4&z#by2%_=1v#b+5k$xk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
