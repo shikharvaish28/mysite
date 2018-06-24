@@ -1,0 +1,13 @@
+.parallax { /*change the name of the parallax as parallax1,2,3... and so on*/
+    /* The image used will be changed here*/
+    background-image: url("http://www.planwallpaper.com/static/images/techno_wallpaper_2_0_hd_by_gredius-d5o48do.jpg");
+
+    /* Set a specific height of the image to be displayed */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
